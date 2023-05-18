@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="439072f6-9024-4c12-97b1-746e877d1cb1" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/monkeynext" />
+  </component>
+  <component name="ProjectId" id="2PdrKmtr35LbID1ndpPDGhWNUxw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\wamp64\www\monkeyreactnext\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\monkeyreactnext\src\ui\components\seo" />
+      <recent name="C:\wamp64\www\monkeyreactnext\src\pages" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\monkeyreactnext\src\pages" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="439072f6-9024-4c12-97b1-746e877d1cb1" name="Default Changelist" comment="" />
+      <created>1683797737968</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683797737968</updated>
+      <workItem from="1683797739995" duration="5341000" />
+      <workItem from="1683880541891" duration="22297000" />
+      <workItem from="1683903321350" duration="8584000" />
+      <workItem from="1683963889572" duration="1703000" />
+      <workItem from="1684134689445" duration="21998000" />
+      <workItem from="1684180694361" duration="599000" />
+      <workItem from="1684222887981" duration="6888000" />
+      <workItem from="1684236171433" duration="1849000" />
+      <workItem from="1684238052068" duration="2655000" />
+      <workItem from="1684242676368" duration="7042000" />
+      <workItem from="1684251157250" duration="1855000" />
+      <workItem from="1684293660825" duration="43040000" />
+      <workItem from="1684394371991" duration="37000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1514" y="508" key="#ESLint" timestamp="1683798291772">
+      <screen x="0" y="0" width="2194" height="1194" />
+    </state>
+    <state x="1514" y="508" key="#ESLint/0.0.2194.1194@0.0.2194.1194" timestamp="1683798291772" />
+    <state width="1076" height="330" key="GridCell.Tab.0.bottom" timestamp="1683798273278">
+      <screen x="0" y="0" width="2194" height="1194" />
+    </state>
+    <state width="1076" height="330" key="GridCell.Tab.0.bottom/0.0.2194.1194@0.0.2194.1194" timestamp="1683798273278" />
+    <state width="1076" height="330" key="GridCell.Tab.0.center" timestamp="1683798273278">
+      <screen x="0" y="0" width="2194" height="1194" />
+    </state>
+    <state width="1076" height="330" key="GridCell.Tab.0.center/0.0.2194.1194@0.0.2194.1194" timestamp="1683798273278" />
+    <state width="1076" height="330" key="GridCell.Tab.0.left" timestamp="1683798273278">
+      <screen x="0" y="0" width="2194" height="1194" />
+    </state>
+    <state width="1076" height="330" key="GridCell.Tab.0.left/0.0.2194.1194@0.0.2194.1194" timestamp="1683798273278" />
+    <state width="1076" height="330" key="GridCell.Tab.0.right" timestamp="1683798273278">
+      <screen x="0" y="0" width="2194" height="1194" />
+    </state>
+    <state width="1076" height="330" key="GridCell.Tab.0.right/0.0.2194.1194@0.0.2194.1194" timestamp="1683798273278" />
+    <state x="1389" y="282" key="run.anything.popup" timestamp="1683893515127">
+      <screen x="0" y="0" width="2194" height="1194" />
+    </state>
+    <state x="1389" y="282" key="run.anything.popup/0.0.2194.1194@0.0.2194.1194" timestamp="1683893515127" />
+  </component>
+</project>
