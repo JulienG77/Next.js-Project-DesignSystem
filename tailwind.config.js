@@ -23,12 +23,18 @@ module.exports = {
         600: "#26a482",
       },
       grey: {
+        300: "#fafafa",
         400: "#f2f2f2",
         500: "#e5e5e5",
         600: "#b2b2b2",
         700: "#808080",
         800: "#333333",
         DEFAULT: "#1D1D1D",
+      },
+      alert: {
+        danger: "#FF4E4E",
+        success: "#90DA1A",
+        warning:"#FEB72F",
       }
     },
     fontSize: {

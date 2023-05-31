@@ -1,11 +1,18 @@
 import {AppLinks} from "../../../types/app-links";
+import {AiFillGithub, AiOutlineLinkedin} from "react-icons/ai";
+import {FiMail} from "react-icons/fi";
 
-export const footerApplicationLinks:AppLinks[] = [
+ const footerApplicationLinks:AppLinks[] = [
     {
         label:"Accueil",
         baseUrl: "/",
         type: "internal",
     },
+    // {
+    //     label:"Nouveau Lien",
+    //     baseUrl: "/#",
+    //     type: "internal",
+    // },
     {
         label:"Projets",
         baseUrl: "https://masstodo.com",
@@ -25,29 +32,29 @@ export const footerApplicationLinks:AppLinks[] = [
 const footerUserLinks:AppLinks[] = [
     {
         label:"Mon Espace",
-        baseUrl: "/",
+        baseUrl: "/#",
         type: "internal",
     },
     {
         label:"Connexion",
-        baseUrl: "/#",
+        baseUrl: "/connexion",
         type: "internal",
     },
     {
         label:"Inscription",
-        baseUrl: "/#",
+        baseUrl: "/connexion/inscription",
         type: "internal",
     },
     {
         label:"Mot de Passe oublié",
-        baseUrl: "/#",
+        baseUrl: "/connexion/mot-de-passe-perdu",
         type: "internal",
     },
 ];
 const footerInformationLinks:AppLinks[] = [
     {
         label:"CGU",
-        baseUrl: "/",
+        baseUrl: "/#",
         type: "internal",
     },
     {
@@ -67,20 +74,42 @@ const footerInformationLinks:AppLinks[] = [
     },
 ];
 
-const footerSocialNetworksLinks:AppLinks[] = [
+export const footerSocialNetworksLinks: AppLinks[] = [
     {
         label:"LinkedIn",
-        baseUrl: "/",
+        baseUrl: "https://www.linkedin.com",
         type: "external",
+        icon: AiOutlineLinkedin,
     },
     {
         label:"GitHub",
-        baseUrl: "/#",
+        baseUrl: "https://github.com/",
         type: "external",
+        icon: AiFillGithub,
     },
     {
         label:"Mail",
-        baseUrl: "/#",
-        type: "external",
+        baseUrl: "/design-system",
+        type: "internal",
+        icon: FiMail,
     },
 ];
+
+export const footerLinks = [
+    {
+        label: "App",
+        links: footerApplicationLinks,
+    },
+    {
+        label: "Utilisateurs",
+        links: footerUserLinks,
+    },
+    {
+        label: "Informations",
+        links: footerInformationLinks,
+    },
+    {
+        label: "Réseaux",
+        links: footerSocialNetworksLinks,
+    },
+]

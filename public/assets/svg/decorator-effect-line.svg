@@ -1,0 +1,78 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     class="svg-snoweb svg-theme-dark svg-builder-basic"
+     x="0"
+     y="0"
+     width="100%"
+     height="100%"
+     viewBox="0 0 100 100"
+     preserveAspectRatio="none"
+>
+<defs>
+    <style>
+        
+            
+            
+            
+        
+
+        .svg-fill-primary {
+            fill: #FFF;
+        }
+
+        .svg-fill-secondary {
+            fill: #65CDAE;
+        }
+
+        .svg-fill-tertiary {
+            fill: #37A987;
+        }
+
+        .svg-stroke-primary {
+            stroke: #FFF;
+        }
+
+        .svg-stroke-secondary {
+            stroke: #65CDAE;
+        }
+
+        .svg-stroke-tertiary {
+            stroke: #37A987;
+        }
+    </style>
+</defs>
+    
+
+<clipPath id="clip-path-202305-2110-1628-a4a70e5d-aa42-4770-a2b6-0f220c3cdcfd">
+    <rect x="0" y="95" width="100" height="5"></rect>
+</clipPath>
+<g clip-path="url(#clip-path-202305-2110-1628-a4a70e5d-aa42-4770-a2b6-0f220c3cdcfd)">
+    <rect 
+            class="svg-fill-tertiary"
+            x="0"
+            y="95"
+            width="100"
+            height="5">
+    </rect>
+    <g transform="translate(0, 50)">
+        <circle 
+                class="svg-fill-secondary svg-builder-circle"
+                cx="50"
+                cy="50"
+                r="50">
+        </circle>
+    </g>
+</g>
+
+    <g transform="translate(20.00, 20.00) scale(0.60, 0.60)">
+        
+    
+    <g id="svg-basic-202305-2110-1628-cda6a674-b6ae-477e-a0f7-fd5fa08b7775-on-start">
+        
+    </g>
+    <g id="svg-basic-202305-2110-1628-cda6a674-b6ae-477e-a0f7-fd5fa08b7775-on-hover">
+        
+    </g>
+
+    </g>
+</svg>

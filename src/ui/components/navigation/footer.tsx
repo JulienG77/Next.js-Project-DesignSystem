@@ -1,21 +1,24 @@
+        {/*** COMPOSANTS ***/}
 import {ActiveLink} from "./active-link";
-
-{/*** COMPOSANTS ***/}
 import {Container} from "../container/container";
 import {Typography} from "../../design-system/typography/typography";
+import {LinkTypes} from "../../../lib/link-types";
+import {SocialNetworksButtons} from "./social-networks-buttons";
         {/*** TYPES ***/}
-import {footerApplicationLinks} from "./app-links";
-        {/*** MODULE ***/}
+import {footerLinks} from "./app-links";
+        {/*** MODULES ***/}
 import Image from "next/image";
 import {v4 as uuidv4 } from 'uuid';
+import {FooterLinks} from "../../../types/app-links";
+import React from "react";
 
 export const Footer = () => {
 
     const currentYear = new Date().getFullYear();
 
-    const footerNavigationList = footerApplicationLinks.map((element) =>(
-        <div key={uuidv4()}>{element.label}</div>
-    ))
+    const footerNavigationList = footerLinks.map((colomnLinks) =>(
+    <FooterLink key={uuidv4()} data={colomnLinks}/>
+    ));
 
     return (
         <div className="bg-grey">
@@ -43,9 +46,9 @@ export const Footer = () => {
                            alt="footer image"/>
                     </a>
                 </div>
-                {/***     <div className="text-primary">{footerNavigationList}</div> ***/}
+                     <div className="text-primary flex justify-between gap-7">{footerNavigationList}</div>
                  <div className="text-primary">
-                     <FooterLink/>
+
                  </div>
             </Container>
 
@@ -66,23 +69,32 @@ export const Footer = () => {
                         {`@MassToDo.com`}
 
                     </Typography>
-                    <div className=""></div>
+                    <div className="">
+                        <SocialNetworksButtons theme="grey"/>
+                    </div>
                 </div>
             </Container>
         </div>
     );
 };
 
-const FooterLink = () => {
+interface footerLinkProps {
+    data: FooterLinks;
+}
 
-    const LinksList = footerApplicationLinks.map((link) =>(
+const FooterLink = ({ data } : footerLinkProps) => {
+
+    const linksList = data.links.map((link) =>(
+
         <div key={uuidv4()}>
-            {link.type === "internal" && (
-                <ActiveLink href={link.baseUrl}>
+            {link.type === LinkTypes.INTERNAL && (
+                <ActiveLink
+                    href={link.baseUrl}
+                >
                     {link.label}
                 </ActiveLink>
             )}
-            {link.type === "external" && (
+            {link.type === LinkTypes.EXTERNAL  && (
                 <a href={link.baseUrl}
                    target="_blank"
                 >
@@ -100,7 +112,7 @@ const FooterLink = () => {
             weight="medium"
             className="pb-5"
             >
-                Titre
+                {data.label}
             </Typography>
 
             <Typography
@@ -108,7 +120,7 @@ const FooterLink = () => {
             variant="caption3"
             className="space-y-4"
             >
-                {LinksList}
+                {linksList}
             </Typography>
         </div>
     )

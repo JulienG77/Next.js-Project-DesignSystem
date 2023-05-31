@@ -8,7 +8,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/monkeynext" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2PdrKmtr35LbID1ndpPDGhWNUxw" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -34,8 +34,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\monkeyreactnext\src\ui\components\seo" />
+      <recent name="C:\wamp64\www\monkeyreactnext\src\pages\connexion" />
       <recent name="C:\wamp64\www\monkeyreactnext\src\pages" />
+      <recent name="C:\wamp64\www\monkeyreactnext\src\ui\modules\landing-page" />
+      <recent name="C:\wamp64\www\monkeyreactnext\src\ui\modules\landing-page\components\hero-top" />
+      <recent name="C:\wamp64\www\monkeyreactnext\src\ui\components" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\monkeyreactnext\src\pages" />
@@ -64,6 +67,29 @@
       <workItem from="1684251157250" duration="1855000" />
       <workItem from="1684293660825" duration="43040000" />
       <workItem from="1684394371991" duration="37000" />
+      <workItem from="1684426651973" duration="48000" />
+      <workItem from="1684481531101" duration="5594000" />
+      <workItem from="1684487425606" duration="2508000" />
+      <workItem from="1684657224822" duration="4956000" />
+      <workItem from="1684662695002" duration="9813000" />
+      <workItem from="1684676388318" duration="3443000" />
+      <workItem from="1684740761282" duration="4783000" />
+      <workItem from="1684745733539" duration="6472000" />
+      <workItem from="1684753031036" duration="7940000" />
+      <workItem from="1684827568488" duration="17394000" />
+      <workItem from="1684912659674" duration="6282000" />
+      <workItem from="1684921118590" duration="15837000" />
+      <workItem from="1685000589190" duration="11671000" />
+      <workItem from="1685012911326" duration="4484000" />
+      <workItem from="1685017451213" duration="6191000" />
+      <workItem from="1685032476439" duration="10270000" />
+      <workItem from="1685086918221" duration="4811000" />
+      <workItem from="1685099922942" duration="650000" />
+      <workItem from="1685100609612" duration="2780000" />
+      <workItem from="1685359569193" duration="1620000" />
+      <workItem from="1685430634872" duration="4384000" />
+      <workItem from="1685435054678" duration="11488000" />
+      <workItem from="1685448361157" duration="584000" />
     </task>
     <servers />
   </component>
@@ -71,10 +97,18 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1514" y="508" key="#ESLint" timestamp="1683798291772">
+    <state x="1514" y="508" key="#ESLint" timestamp="1684657367271">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
-    <state x="1514" y="508" key="#ESLint/0.0.2194.1194@0.0.2194.1194" timestamp="1683798291772" />
+    <state x="1514" y="508" key="#ESLint/0.0.2194.1194@0.0.2194.1194" timestamp="1684657367271" />
+    <state x="1415" y="407" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1684659202177">
+      <screen x="0" y="0" width="2194" height="1194" />
+    </state>
+    <state x="1415" y="407" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2194.1194@0.0.2194.1194" timestamp="1684659202177" />
+    <state x="1351" y="180" key="CommitChangelistDialog2" timestamp="1685003844181">
+      <screen x="0" y="0" width="2194" height="1194" />
+    </state>
+    <state x="1351" y="180" key="CommitChangelistDialog2/0.0.2194.1194@0.0.2194.1194" timestamp="1685003844181" />
     <state width="1076" height="330" key="GridCell.Tab.0.bottom" timestamp="1683798273278">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
@@ -91,9 +125,29 @@
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
     <state width="1076" height="330" key="GridCell.Tab.0.right/0.0.2194.1194@0.0.2194.1194" timestamp="1683798273278" />
-    <state x="1389" y="282" key="run.anything.popup" timestamp="1683893515127">
+    <state x="1389" y="282" key="run.anything.popup" timestamp="1685433881970">
       <screen x="0" y="0" width="2194" height="1194" />
     </state>
-    <state x="1389" y="282" key="run.anything.popup/0.0.2194.1194@0.0.2194.1194" timestamp="1683893515127" />
+    <state x="1389" y="282" key="run.anything.popup/0.0.2194.1194@0.0.2194.1194" timestamp="1685433881970" />
+    <state x="1322" y="258" width="672" height="676" key="search.everywhere.popup" timestamp="1685089899688">
+      <screen x="0" y="0" width="2194" height="1194" />
+    </state>
+    <state x="1322" y="258" width="672" height="676" key="search.everywhere.popup/0.0.2194.1194@0.0.2194.1194" timestamp="1685089899688" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/ui/modules/landing-page/components/featured/featured.view.tsx</url>
+          <line>51</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/pages/design-system.tsx</url>
+          <line>5</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

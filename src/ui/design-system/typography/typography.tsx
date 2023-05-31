@@ -5,7 +5,7 @@ interface Props{
     variant?: "display" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "lead" | "body-lg" | "body-base" | "body-sm" | "caption1" | "caption2" | "caption3" | "caption4";
     children: React.ReactNode;
     component?: "h1"|"h2"|"h3"|"h4"|"h5"|"div"|"p"|"span";
-    theme?: "black" | "grey" | "white" | "primary" | "secondary";
+    theme?: "black" | "grey" | "white" | "primary" | "secondary" |"danger" |"warning" | "success";
     weight?: "regular" | "medium";
     className?: string;
 }
@@ -84,6 +84,15 @@ export const Typography = ({
                     break;
                 case "secondary":
                     colorStyles = "text-secondary";
+                    break;
+                    case "danger":
+                    colorStyles = "text-alert-danger";
+                    break;
+                    case "warning":
+                    colorStyles = "text-alert-warning";
+                    break;
+                    case "success":
+                    colorStyles = "text-alert-success";
                     break;
                 default:
                     break;

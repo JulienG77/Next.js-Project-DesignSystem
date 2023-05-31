@@ -2,7 +2,6 @@ import {Container} from "../container/container";
 import {Logo} from "../../design-system/logo/logo";
 import {Typography} from "../../design-system/typography/typography";
 import {Button} from "../../design-system/buttons/button";
-import Link from "next/link";
 import {ActiveLink} from "./active-link";
 
 interface Props {
@@ -49,8 +48,8 @@ export const Navigation = ({}:Props) => {
 
                     </Typography>
                     <div className="flex items-center gap-7">
-                        <Button size="small">Connexion</Button>
-                        <Button size="small" variant="secondary" >Inscription</Button>
+                        <Button size="small" baseUrl="/connexion">Connexion</Button>
+                        <Button size="small" variant="secondary" baseUrl="/connexion/inscription" >Inscription</Button>
                     </div>
                 </div>
             </Container>

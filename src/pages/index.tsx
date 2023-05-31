@@ -1,15 +1,17 @@
 import { Seo } from '../ui/components/seo/seo'
-import {Navigation} from "../ui/components/navigation/navigation";
-import {Footer} from "../ui/components/navigation/footer";
+import {Layout} from "../ui/components/layout/layout";
+import {LandingPageContainer} from "../ui/modules/landing-page/landing-page.container";
+
 
 export default function Home() {
   return (
     <>
-      <Seo title="Design System Ui" description="titre"/>
+      <Seo title="Accueil" description="titre"/>
       <meta name="description" content="description"/>
 
-      <Navigation/>
-      <Footer/>
+        <Layout isdisplayBreadcrumbs={false}>
+            <LandingPageContainer/>
+        </Layout>
 </>
 
   )

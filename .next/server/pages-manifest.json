@@ -1,9 +1,12 @@
 {
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
   "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
   "/api/hello": "pages/api/hello.js",
+  "/connexion": "pages/connexion.html",
+  "/connexion/inscription": "pages/connexion/inscription.html",
+  "/connexion/mot-de-passe-perdu": "pages/connexion/mot-de-passe-perdu.html",
   "/design-system": "pages/design-system.html",
   "/": "pages/index.html",
+  "/_document": "pages/_document.js",
   "/404": "pages/404.html"
 }

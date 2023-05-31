@@ -3,12 +3,13 @@ import clsx from "clsx";
 
 interface Props {
     size?: "small" | "medium" | "large";
-    variant?: "primary" | "white";
+    variant?: "primary" | "white" | "accent" ;
 
 }
 
 export const Spinner = ({size ="medium" , variant = "primary"}: Props) => {
-    let variantStyles : string, sizeStyles: string;
+    let variantStyles : string = "",
+        sizeStyles: string = "";
 
     switch (size) {
         case "small":
