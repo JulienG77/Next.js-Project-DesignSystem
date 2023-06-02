@@ -32,7 +32,7 @@ import {FiMail} from "react-icons/fi";
 const footerUserLinks:AppLinks[] = [
     {
         label:"Mon Espace",
-        baseUrl: "/#",
+        baseUrl: "/mon-espace",
         type: "internal",
     },
     {

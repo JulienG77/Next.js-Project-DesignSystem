@@ -16,9 +16,12 @@ export const Breadcrumbs = () => {
 
     const view = segments.map((path, index) => (
 
-        <div key={uuidv4()}>
+        <div key={uuidv4()} className="flex items-center">
 
-            <Link href={index > 0 ?  `/ ${segments.slice(1, index + 1 ).join("/") }` : `/` }>
+            <Link href={ index > 0
+                ? `/ ${segments.slice(1, index + 1 ).join("/") }`
+                : `/` }
+            >
 
             <Typography
             variant="caption3"
@@ -26,7 +29,11 @@ export const Breadcrumbs = () => {
             className={clsx(path !== lastSegment ? "text-grey-600" : "text-grey", "capitalize hover:text-grey animate"
             )}
             >
-                {path !== "accueil" ? path.replace(/-/g, " ") : <RiHome3Line className="mb-1 inline"/>}
+                {path !== "accueil"
+                    ? ( path.replace(/-/g, " ")
+                    ) : (
+                     <RiHome3Line className="mb-1 inline"/>
+                    )}
             </Typography>
 
             { path !== lastSegment && (

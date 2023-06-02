@@ -21,9 +21,9 @@ export const Footer = () => {
     ));
 
     return (
-        <div className="bg-grey">
-            <Container className="flex justify-between pt-16">
-                <div className="flex flex-col items-center gap-2">
+        <div className="flex-col md:justify-center bg-grey">
+            <Container className="  md:flex lg:flex justify-between pt-16">
+                <div className="flex flex-col items-center gap-4 mb-4">
                     <Typography
                         variant="caption1"
                         theme="white"
@@ -31,6 +31,7 @@ export const Footer = () => {
                     >
                         Lien Youtube
                     </Typography>
+
                     <Typography
                         variant="caption3"
                         theme="grey"
@@ -46,9 +47,14 @@ export const Footer = () => {
                            alt="footer image"/>
                     </a>
                 </div>
-                     <div className="text-primary flex justify-between gap-7">{footerNavigationList}</div>
-                 <div className="text-primary">
 
+                     {/*******   Liens Footer *******/}
+                     <div className="text-center items-center justify-center justify-between gap-2 pt-5 text-primary sm:flex md:flex md:gap-7 w-full"
+                     >
+                         {footerNavigationList}
+                     </div>
+
+                 <div className="text-primary">
                  </div>
             </Container>
 
@@ -105,12 +111,12 @@ const FooterLink = ({ data } : footerLinkProps) => {
     ));
 
     return (
-        <div className="min-w-[190px]">
+        <div className="w-full">
             <Typography
             theme="white"
             variant="caption2"
             weight="medium"
-            className="pb-5"
+            className="pb-5 underline items-center"
             >
                 {data.label}
             </Typography>
@@ -118,10 +124,27 @@ const FooterLink = ({ data } : footerLinkProps) => {
             <Typography
             theme="grey"
             variant="caption3"
-            className="space-y-4"
+            className="flex flex-col justify-center space-y-4 mb-6"
             >
                 {linksList}
             </Typography>
+
+            {/*<Typography*/}
+            {/*theme="white"*/}
+            {/*variant="caption2"*/}
+            {/*weight="medium"*/}
+            {/*className="pb-5 underline items-center"*/}
+            {/*>*/}
+            {/*    {data.label}*/}
+            {/*</Typography>*/}
+
+            {/*<Typography*/}
+            {/*theme="grey"*/}
+            {/*variant="caption3"*/}
+            {/*className="flex flex-col justify-center space-y-4 mb-6"*/}
+            {/*>*/}
+            {/*    {linksList}*/}
+            {/*</Typography>*/}
         </div>
     )
         }

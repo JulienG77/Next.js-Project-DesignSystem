@@ -2,7 +2,7 @@ import clsx from "clsx";
 import React from "react";
 
 interface Props{
-    variant?: "display" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "lead" | "body-lg" | "body-base" | "body-sm" | "caption1" | "caption2" | "caption3" | "caption4";
+    variant?: "display" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "lead" | "body-lg" | "body-base" | "body-sm" | "caption1" | "caption2" | "caption3" | "caption4" | "caption5" | "caption6";
     children: React.ReactNode;
     component?: "h1"|"h2"|"h3"|"h4"|"h5"|"div"|"p"|"span";
     theme?: "black" | "grey" | "white" | "primary" | "secondary" |"danger" |"warning" | "success";
@@ -67,6 +67,12 @@ export const Typography = ({
                 break;
             case "caption4":
                 variantStyles = "text-caption4"
+                break;
+                case "caption5":
+                variantStyles = "text-caption5"
+                break;
+                case "caption6":
+                variantStyles = "text-caption6"
                 break;
         }
             switch (theme) {

@@ -4,6 +4,7 @@
   "/api/hello": "pages/api/hello.js",
   "/connexion": "pages/connexion.html",
   "/connexion/inscription": "pages/connexion/inscription.html",
+  "/connexion/mon-espace": "pages/connexion/mon-espace.html",
   "/connexion/mot-de-passe-perdu": "pages/connexion/mot-de-passe-perdu.html",
   "/design-system": "pages/design-system.html",
   "/": "pages/index.html",

@@ -6,8 +6,8 @@ import {LinkType, LinkTypes} from "../../../lib/link-types";
 import Link from "next/link";
 
 interface Props {
-    size?: "small" | "medium" | "large";
-    variant?: "accent" | "secondary" | "outline" | "disabled" | "icon" | "success";
+    size?: "very-small" | "small" | "medium" | "large";
+    variant?: "accent" | "secondary" | "outline" | "disabled" | "icon" | "success" | "danger";
     icon?: IconProps ;
     iconTheme?: "accent" | "secondary" | "grey";
     iconPosition?: "left" | "right";
@@ -58,6 +58,9 @@ export const Button = ({
         case "success":
             variantStyles = "bg-secondary hover:bg-secondary-400 text-white rounded";
             break;
+            case "danger":
+            variantStyles = "bg-alert-danger hover:bg-alert-danger/75 text-white rounded";
+            break;
         case "icon":
             if (iconTheme === "accent") {
                 variantStyles = "bg-primary hover:bg-primary-400 text-white rounded-full";
@@ -72,6 +75,14 @@ export const Button = ({
     }
 
     switch (size) {
+        case "very-small":
+            sizeStyles = `text-caption4 font-small ${
+                variant === "icon"
+                    ? "flex items-center justify-center w-[25px] h-[25px]"
+                    : "px-[10px] py-[8px] mt-0.5 mb-2 ml-1"
+            }`;
+            iconSize = 14;
+            break;
         case "small":
             sizeStyles = `text-caption3 font-medium ${
                 variant === "icon"

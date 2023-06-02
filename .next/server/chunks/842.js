@@ -3,6 +3,161 @@ exports.id = 842;
 exports.ids = [842];
 exports.modules = {
 
+/***/ 5567:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Lj": () => (/* binding */ firebaseLogOutUser),
+/* harmony export */   "QY": () => (/* binding */ ResetUserPassword),
+/* harmony export */   "Vf": () => (/* binding */ firebaseSignInUser),
+/* harmony export */   "f1": () => (/* binding */ firebaseCreateUser)
+/* harmony export */ });
+/* harmony import */ var _firebase_auth__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(61);
+/* harmony import */ var _config_firebase_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5929);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_firebase_auth__WEBPACK_IMPORTED_MODULE_0__, _config_firebase_config__WEBPACK_IMPORTED_MODULE_1__]);
+([_firebase_auth__WEBPACK_IMPORTED_MODULE_0__, _config_firebase_config__WEBPACK_IMPORTED_MODULE_1__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
+
+const firebaseCreateUser = async (email, password)=>{
+    try {
+        const userCredential = await (0,_firebase_auth__WEBPACK_IMPORTED_MODULE_0__.createUserWithEmailAndPassword)(_config_firebase_config__WEBPACK_IMPORTED_MODULE_1__/* .auth */ .I, email, password);
+        return {
+            data: userCredential.user
+        };
+    } catch (error) {
+        const firebaseError = error;
+        return {
+            error: {
+                code: firebaseError.code,
+                message: firebaseError.message
+            }
+        };
+    }
+};
+const firebaseSignInUser = async (email, password)=>{
+    try {
+        const userCredential = await (0,_firebase_auth__WEBPACK_IMPORTED_MODULE_0__.signInWithEmailAndPassword)(_config_firebase_config__WEBPACK_IMPORTED_MODULE_1__/* .auth */ .I, email, password);
+        return {
+            data: userCredential.user
+        };
+    } catch (error) {
+        const firebaseError = error;
+        return {
+            error: {
+                code: firebaseError.code,
+                message: firebaseError.message
+            }
+        };
+    }
+};
+const firebaseLogOutUser = async ()=>{
+    try {
+        await (0,_firebase_auth__WEBPACK_IMPORTED_MODULE_0__.signOut)(_config_firebase_config__WEBPACK_IMPORTED_MODULE_1__/* .auth */ .I);
+        return {
+            data: true
+        };
+    } catch (error) {
+        const firebaseError = error;
+        return {
+            error: {
+                code: firebaseError.code,
+                message: firebaseError.message
+            }
+        };
+    }
+};
+const ResetUserPassword = async (email)=>{
+    try {
+        await (0,_firebase_auth__WEBPACK_IMPORTED_MODULE_0__.sendPasswordResetEmail)(_config_firebase_config__WEBPACK_IMPORTED_MODULE_1__/* .auth */ .I, email);
+        return {
+            data: true
+        };
+    } catch (error) {
+        const firebaseError = error;
+        return {
+            error: {
+                code: firebaseError.code,
+                message: firebaseError.message
+            }
+        };
+    }
+};
+
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 5929:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "I": () => (/* binding */ auth)
+/* harmony export */ });
+/* unused harmony export app */
+/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3745);
+/* harmony import */ var firebase_auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(401);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([firebase_app__WEBPACK_IMPORTED_MODULE_0__, firebase_auth__WEBPACK_IMPORTED_MODULE_1__]);
+([firebase_app__WEBPACK_IMPORTED_MODULE_0__, firebase_auth__WEBPACK_IMPORTED_MODULE_1__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+// Import the functions you need from the SDKs you need
+
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+//
+// Your web app's Firebase configuration
+//  OLD SETUP
+// const firebaseConfig = {
+//
+//     apiKey: "AIzaSyB8evXhjnYJ4vN636MqowHzjl_3jnowyRI",
+//
+//     authDomain: "projetnextmonkey.firebaseapp.com",
+//
+//     projectId: "projetnextmonkey",
+//
+//     storageBucket: "projetnextmonkey.appspot.com",
+//
+//     messagingSenderId: "1022447178884",
+//
+//     appId: "1:1022447178884:web:e9dcc10bea951c686eded1"
+// };
+const firebaseConfig = {
+    apiKey: "AIzaSyDku59EJ6XoGak8uvdQxeq1B3DMWbRpwFo",
+    authDomain: "monkeytest1-ec597.firebaseapp.com",
+    projectId: "monkeytest1-ec597",
+    storageBucket: "monkeytest1-ec597.appspot.com",
+    messagingSenderId: "218322387768",
+    appId: "1:218322387768:web:b8fcd8233c13e72e60f7cd"
+};
+//
+// const firebaseConfig = {
+//
+//     apiKey: process.env.API_KEY,
+//
+//     authDomain: process.env.AUTH_DOMAIN,
+//
+//     projectId: process.env.PROJECT_ID,
+//
+//     storageBucket: process.env.STORAGE_BUCKET,
+//
+//     messagingSenderId: process.env.MESSAGING_SENDER_ID,
+//
+//     appId: process.env.APP_ID,
+//
+//     measurementId: process.env.MEASUREMENT_ID,
+// };
+//
+// Initialize Firebase
+const app = (0,firebase_app__WEBPACK_IMPORTED_MODULE_0__.initializeApp)(firebaseConfig);
+const auth = (0,firebase_auth__WEBPACK_IMPORTED_MODULE_1__.getAuth)(app);
+
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
 /***/ 7354:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -56,6 +211,7 @@ const Breadcrumbs = ()=>{
     const lastSegment = segments[segments.length - 1];
     segments[0] = "accueil";
     const view = segments.map((path, index)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+            className: "flex items-center",
             children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_link__WEBPACK_IMPORTED_MODULE_8___default()), {
                 href: index > 0 ? `/ ${segments.slice(1, index + 1).join("/")}` : `/`,
                 children: [
@@ -125,19 +281,52 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _navigation_navigation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(229);
 /* harmony import */ var _navigation_footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5217);
 /* harmony import */ var _breadcrumbs_breadcrumbs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(2534);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_navigation_footer__WEBPACK_IMPORTED_MODULE_3__, _breadcrumbs_breadcrumbs__WEBPACK_IMPORTED_MODULE_4__]);
-([_navigation_footer__WEBPACK_IMPORTED_MODULE_3__, _breadcrumbs_breadcrumbs__WEBPACK_IMPORTED_MODULE_4__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var _container_container__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(9194);
+/* harmony import */ var _navigation_user_account_navigation__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(795);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_navigation_footer__WEBPACK_IMPORTED_MODULE_3__, _breadcrumbs_breadcrumbs__WEBPACK_IMPORTED_MODULE_4__, _navigation_user_account_navigation__WEBPACK_IMPORTED_MODULE_6__]);
+([_navigation_footer__WEBPACK_IMPORTED_MODULE_3__, _breadcrumbs_breadcrumbs__WEBPACK_IMPORTED_MODULE_4__, _navigation_user_account_navigation__WEBPACK_IMPORTED_MODULE_6__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
 
 
 
 
-const Layout = ({ children , isdisplayBreadcrumbs =true  })=>{
+
+
+const Layout = ({ children , isdisplayBreadcrumbs =true , widthSideBar  })=>{
+    let view = /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+        children: " "
+    });
+    if (widthSideBar) {
+        view = /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_container_container__WEBPACK_IMPORTED_MODULE_5__/* .Container */ .W, {
+            className: "mb-14",
+            children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                className: "grid grid-cols-12 gap-7",
+                children: [
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                        className: "col-span-3",
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_navigation_user_account_navigation__WEBPACK_IMPORTED_MODULE_6__/* .UserAccountNavigation */ .L, {})
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                        className: "col-span-9 bg-primary-200",
+                        children: children
+                    })
+                ]
+            })
+        });
+    } else {
+        view = /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+            children: [
+                " ",
+                children,
+                " "
+            ]
+        });
+    }
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_navigation_navigation__WEBPACK_IMPORTED_MODULE_2__/* .Navigation */ .W, {}),
             isdisplayBreadcrumbs && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_breadcrumbs_breadcrumbs__WEBPACK_IMPORTED_MODULE_4__/* .Breadcrumbs */ .O, {}),
-            children,
+            view,
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_navigation_footer__WEBPACK_IMPORTED_MODULE_3__/* .Footer */ .$, {})
         ]
     });
@@ -230,7 +419,7 @@ const footerApplicationLinks = [
 const footerUserLinks = [
     {
         label: "Mon Espace",
-        baseUrl: "/#",
+        baseUrl: "/mon-espace",
         type: "internal"
     },
     {
@@ -350,13 +539,13 @@ const Footer = ()=>{
             data: colomnLinks
         }, (0,uuid__WEBPACK_IMPORTED_MODULE_8__.v4)()));
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-        className: "bg-grey",
+        className: "flex-col md:justify-center bg-grey",
         children: [
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_container_container__WEBPACK_IMPORTED_MODULE_2__/* .Container */ .W, {
-                className: "flex justify-between pt-16",
+                className: "  md:flex lg:flex justify-between pt-16",
                 children: [
                     /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                        className: "flex flex-col items-center gap-2",
+                        className: "flex flex-col items-center gap-4 mb-4",
                         children: [
                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_design_system_typography_typography__WEBPACK_IMPORTED_MODULE_3__/* .Typography */ .Z, {
                                 variant: "caption1",
@@ -385,7 +574,7 @@ const Footer = ()=>{
                         ]
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                        className: "text-primary flex justify-between gap-7",
+                        className: "text-center items-center justify-center justify-between gap-2 pt-5 text-primary sm:flex md:flex md:gap-7 w-full",
                         children: footerNavigationList
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
@@ -444,19 +633,19 @@ const FooterLink = ({ data  })=>{
             ]
         }, (0,uuid__WEBPACK_IMPORTED_MODULE_8__.v4)()));
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-        className: "min-w-[190px]",
+        className: "w-full",
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_design_system_typography_typography__WEBPACK_IMPORTED_MODULE_3__/* .Typography */ .Z, {
                 theme: "white",
                 variant: "caption2",
                 weight: "medium",
-                className: "pb-5",
+                className: "pb-5 underline items-center",
                 children: data.label
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_design_system_typography_typography__WEBPACK_IMPORTED_MODULE_3__/* .Typography */ .Z, {
                 theme: "grey",
                 variant: "caption3",
-                className: "space-y-4",
+                className: "flex flex-col justify-center space-y-4 mb-6",
                 children: linksList
             })
         ]
@@ -480,6 +669,9 @@ __webpack_async_result__();
 /* harmony import */ var _design_system_typography_typography__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5241);
 /* harmony import */ var _design_system_buttons_button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(3572);
 /* harmony import */ var _active_link__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4733);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 
@@ -488,29 +680,33 @@ __webpack_async_result__();
 
 const Navigation = ({})=>{
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-        className: "bg-grey-400 border-b-2 border-500",
+        className: "w-full bg-grey-500 hover:bg-grey-400/50 animate border-b-2 border-500",
         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_container_container__WEBPACK_IMPORTED_MODULE_1__/* .Container */ .W, {
             className: "flex items-center justify-between py-1.5",
             children: [
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_active_link__WEBPACK_IMPORTED_MODULE_5__/* .ActiveLink */ .O, {
                     href: "/",
                     children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                        className: "flex items-center gap-2.5",
+                        className: "flex items-center gap-2",
                         children: [
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_design_system_logo_logo__WEBPACK_IMPORTED_MODULE_2__/* .Logo */ .T, {
-                                size: "medium"
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                className: "invisible sm:visible",
+                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_design_system_logo_logo__WEBPACK_IMPORTED_MODULE_2__/* .Logo */ .T, {
+                                    size: "small"
+                                })
                             }),
                             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                className: "flex flex-col",
+                                className: "flex flex-col -ml-[70px] mr-[15px] sm:-ml-[9px]",
                                 children: [
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                        className: "text-grey font-extrabold text-[24px]",
-                                        children: "TITLE title"
+                                        className: "text-grey font-bold text-[22x]",
+                                        children: "TITLE"
                                     }),
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_design_system_typography_typography__WEBPACK_IMPORTED_MODULE_3__/* .Typography */ .Z, {
                                         variant: "caption4",
                                         component: "span",
                                         theme: "grey",
+                                        className: "mr-[10px]",
                                         children: "SLOGAN slogan"
                                     })
                                 ]
@@ -519,11 +715,11 @@ const Navigation = ({})=>{
                     })
                 }),
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                    className: "flex items-center gap-7",
+                    className: "flex items-center gap-7 ml-1",
                     children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_design_system_typography_typography__WEBPACK_IMPORTED_MODULE_3__/* .Typography */ .Z, {
-                        variant: "caption3",
+                        variant: "caption5",
                         component: "div",
-                        className: "flex items-center gap-7",
+                        className: " ml-auto mr-auto font-bold flex items-center gap-3.5 sm:text-[0.8rem] sm:font-normal md:text-[1rem] lg:text-[1.3rem]",
                         children: [
                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_active_link__WEBPACK_IMPORTED_MODULE_5__/* .ActiveLink */ .O, {
                                 href: "/design-system",
@@ -544,27 +740,24 @@ const Navigation = ({})=>{
                         ]
                     })
                 }),
-                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                     className: "flex items-center gap-7",
-                    children: [
-                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_design_system_typography_typography__WEBPACK_IMPORTED_MODULE_3__/* .Typography */ .Z, {}),
-                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                            className: "flex items-center gap-7",
-                            children: [
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_design_system_buttons_button__WEBPACK_IMPORTED_MODULE_4__/* .Button */ .z, {
-                                    size: "small",
-                                    baseUrl: "/connexion",
-                                    children: "Connexion"
-                                }),
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_design_system_buttons_button__WEBPACK_IMPORTED_MODULE_4__/* .Button */ .z, {
-                                    size: "small",
-                                    variant: "secondary",
-                                    baseUrl: "/connexion/inscription",
-                                    children: "Inscription"
-                                })
-                            ]
-                        })
-                    ]
+                    children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                        className: "ml-5  flex-col sm:flex-row md:flex-row lg:flex-row items-center ",
+                        children: [
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_design_system_buttons_button__WEBPACK_IMPORTED_MODULE_4__/* .Button */ .z, {
+                                size: "very-small",
+                                baseUrl: "/connexion",
+                                children: "Connexion"
+                            }),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_design_system_buttons_button__WEBPACK_IMPORTED_MODULE_4__/* .Button */ .z, {
+                                size: "very-small",
+                                variant: "secondary",
+                                baseUrl: "/connexion/inscription",
+                                children: "Inscription"
+                            })
+                        ]
+                    })
                 })
             ]
         })
@@ -618,6 +811,76 @@ __webpack_async_result__();
 
 /***/ }),
 
+/***/ 795:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "L": () => (/* binding */ UserAccountNavigation)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+/* harmony import */ var _design_system_buttons_button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3572);
+/* harmony import */ var _design_system_typography_typography__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5241);
+/* harmony import */ var _design_system_box_box__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(687);
+/* harmony import */ var _api_authentication__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5567);
+/* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(3590);
+/* harmony import */ var _active_link__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(4733);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_api_authentication__WEBPACK_IMPORTED_MODULE_4__, react_toastify__WEBPACK_IMPORTED_MODULE_5__]);
+([_api_authentication__WEBPACK_IMPORTED_MODULE_4__, react_toastify__WEBPACK_IMPORTED_MODULE_5__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
+
+
+
+
+
+
+const UserAccountNavigation = ()=>{
+    const handleLogOutUser = async ()=>{
+        const { error  } = await (0,_api_authentication__WEBPACK_IMPORTED_MODULE_4__/* .firebaseLogOutUser */ .Lj)();
+        if (error) {
+            react_toastify__WEBPACK_IMPORTED_MODULE_5__.toast.error(error.message);
+            return;
+        }
+        react_toastify__WEBPACK_IMPORTED_MODULE_5__.toast.success("D\xe9connexion r\xe9ussie.");
+    };
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_design_system_box_box__WEBPACK_IMPORTED_MODULE_3__/* .Box */ .x, {
+        className: "flex flex-col gap-5 pb-5 py-3",
+        children: [
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                className: "flex flex-col gap-3 pb-2",
+                children: [
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_design_system_typography_typography__WEBPACK_IMPORTED_MODULE_2__/* .Typography */ .Z, {
+                        variant: "caption2",
+                        weight: "medium",
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_active_link__WEBPACK_IMPORTED_MODULE_6__/* .ActiveLink */ .O, {
+                            href: "/mon-espace",
+                            children: "Mon Compte"
+                        })
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_design_system_typography_typography__WEBPACK_IMPORTED_MODULE_2__/* .Typography */ .Z, {
+                        variant: "caption2",
+                        weight: "medium",
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_active_link__WEBPACK_IMPORTED_MODULE_6__/* .ActiveLink */ .O, {
+                            href: "/mes-projets",
+                            children: "Mes Projets"
+                        })
+                    })
+                ]
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_design_system_buttons_button__WEBPACK_IMPORTED_MODULE_1__/* .Button */ .z, {
+                action: handleLogOutUser,
+                variant: "danger",
+                children: "Se D\xe9connecter"
+            })
+        ]
+    });
+};
+
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
 /***/ 962:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -651,6 +914,27 @@ const Seo = ({ title , description  })=>{
                 content: "width=device-width, initial-scale=1"
             })
         ]
+    });
+};
+
+
+/***/ }),
+
+/***/ 687:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "x": () => (/* binding */ Box)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8103);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(clsx__WEBPACK_IMPORTED_MODULE_1__);
+
+
+const Box = ({ children , className , padding_x ="px-9" , padding_y ="px9"  })=>{
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+        className: clsx__WEBPACK_IMPORTED_MODULE_1___default()("w-full border border-grey-400 rounded bg-white", className, padding_x, padding_y),
+        children: children
     });
 };
 
@@ -696,6 +980,9 @@ const Button = ({ size ="medium" , variant ="accent" , icon , iconTheme ="accent
         case "success":
             variantStyles = "bg-secondary hover:bg-secondary-400 text-white rounded";
             break;
+        case "danger":
+            variantStyles = "bg-alert-danger hover:bg-alert-danger/75 text-white rounded";
+            break;
         case "icon":
             if (iconTheme === "accent") {
                 variantStyles = "bg-primary hover:bg-primary-400 text-white rounded-full";
@@ -709,6 +996,10 @@ const Button = ({ size ="medium" , variant ="accent" , icon , iconTheme ="accent
             break;
     }
     switch(size){
+        case "very-small":
+            sizeStyles = `text-caption4 font-small ${variant === "icon" ? "flex items-center justify-center w-[25px] h-[25px]" : "px-[10px] py-[8px] mt-0.5 mb-2 ml-1"}`;
+            iconSize = 14;
+            break;
         case "small":
             sizeStyles = `text-caption3 font-medium ${variant === "icon" ? "flex items-center justify-center w-[40px] h-[40px]" : "px-[14px] py-[12px]"}`;
             iconSize = 18;
@@ -1897,6 +2188,12 @@ const Typography = ({ variant ="h3" , children , component: Component = "div" , 
             break;
         case "caption4":
             variantStyles = "text-caption4";
+            break;
+        case "caption5":
+            variantStyles = "text-caption5";
+            break;
+        case "caption6":
+            variantStyles = "text-caption6";
             break;
     }
     switch(theme){

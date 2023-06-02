@@ -113,6 +113,16 @@ module.exports = {
         letterSpacing: '-0.2px',
         fontWeight: '400',
       }],
+      'caption5': ['12px', {
+        lineHeight: '14px',
+        letterSpacing: '-0.2px',
+        fontWeight: '400',
+      }],
+      'caption6': ['8px', {
+        lineHeight: '10px',
+        letterSpacing: '-0.2px',
+        fontWeight: '400',
+      }],
     },
     borderRadius: {
       DEFAULT: "10px",

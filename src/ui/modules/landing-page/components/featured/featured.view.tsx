@@ -51,7 +51,7 @@ export const FeaturedView = () => {
             key={uuidv4()}
             className="flex flex-col items-center justify-center bg-white rounded p-7">
 
-        <div className="relative w-[130px] h-[130px] rounded-full mb-6 p-10 overflow-hidden">
+        <div className="w-full relative w-[130px] h-[130px] rounded-full mb-6 p-10 overflow-hidden">
             <Image fill
                    src={feature.imagePath}
                    alt={feature.imageAlt}
@@ -85,14 +85,14 @@ export const FeaturedView = () => {
         </div>
 ))
 
-    return <div className="bg-grey-300">
-        <Container className="grid grid-cols-12 gap-24 py-24">
+    return <div className="bg-grey-300 pb-10 sm:pb-8 md:pb-0 w-full">
+        <Container className="md:pb-10 lg:grid lg:grid-cols-12 lg:gap-24 lg:py-24 lg:w-full">
 
-            <div className="grid grid-cols-2 col-span-7 gap-7">
+            <div className="md:grid md:grid-cols-2 md:col-span-7 md:gap-7">
                 {featuredList}
             </div>
 
-            <div className="flex flex-col justify-between col-span-5 gap-10">
+            <div className="w-full flex flex-col justify-between col-span-5 gap-10">
                 <Typography variant="h2" component="h2" className="mb-5">
                     Lorem ipsum dolor sit amet.
                 </Typography>
